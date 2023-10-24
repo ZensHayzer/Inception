@@ -43,6 +43,7 @@ services:
     restart: always
     expose:
       - "9000"
+
   volumes:
     wordpress:
       driver: local
@@ -56,6 +57,7 @@ services:
         type: 'none'
         o: 'bind'
         device: '/Users/root/data/mariadb'
-  networks:
-    inception:
-      driver: bridge
+
+networks:
+  inception:
+    driver: bridge
