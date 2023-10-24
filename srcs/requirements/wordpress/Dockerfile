@@ -21,4 +21,4 @@ COPY conf/confwp.sh /var/confwp.sh
 
 RUN chmod 755 /var/confwp.sh
 
-ENTRYPOINT [ "/var/confwp.sh" ]
+CMD ["sh", "/var/confwp.sh"]
