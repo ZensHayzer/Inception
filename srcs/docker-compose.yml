@@ -48,15 +48,15 @@ volumes:
   wordpress:
     driver: local
     driver-opts:
-      type: 'none'
-      o: 'bind'
-      device: '/Users/root/data/wordpress'
+      type: volumes
+      o: bind
+      device: /Users/root/data/wordpress
   mariadb:
     driver: local
     driver_opts:
-      type: 'none'
-      o: 'bind'
-      device: '/Users/root/data/mariadb'
+      type: volumes
+      o: bind
+      device: /Users/root/data/mariadb
 
 networks:
   inception:
