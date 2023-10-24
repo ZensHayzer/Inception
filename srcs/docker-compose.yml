@@ -43,20 +43,19 @@ services:
     restart: always
     expose:
       - "9000"
-
-volumes:
-  mariadb:
-    driver: local
-    driver_opts:
-      type: volumes
-      o: bind
-      device: /root/data/mariadb
-  wordpress:
-    driver: local
-    driver-opts:
-      type: volumes
-      o: bind
-      device: /root/data/wordpress
+  volumes:
+    mariadb:
+      driver: local
+      driver_opts:
+        type: volumes
+        o: bind
+        device: /root/data/mariadb
+    wordpress:
+      driver: local
+      driver-opts:
+        type: volumes
+        o: bind
+        device: /root/data/wordpress
 
 networks:
   inception:
