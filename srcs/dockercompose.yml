@@ -10,7 +10,7 @@ services:
       env_file: .env
       volumes:
         - mariadb:/var/lib/mysql
-      restart: unless-stopped
+      restart: always
       expose:
         - "3306"
   nginx:
@@ -40,7 +40,7 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - mariadb
-    restart: on-failure
+    restart: always
     expose:
       - "9000"
   volumes:
