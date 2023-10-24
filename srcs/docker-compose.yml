@@ -45,18 +45,18 @@ services:
       - "9000"
 
 volumes:
-  wordpress:
-    driver: local
-    driver-opts:
-      type: volumes
-      o: bind
-      device: /Users/root/data/wordpress
   mariadb:
     driver: local
     driver_opts:
       type: volumes
       o: bind
-      device: /Users/root/data/mariadb
+      device: /home/root/data/mariadb
+  wordpress:
+    driver: local
+    driver-opts:
+      type: volumes
+      o: bind
+      device: /home/root/data/wordpress
 
 networks:
   inception:
