@@ -7,11 +7,11 @@ services:
     build:
       context: requirement/mariadb
       dockerfile: Dockerfile
-      env_file: .env
-      volumes:
+    env_file: .env
+    volumes:
         - mariadb:/var/lib/mysql
-      restart: always
-      expose:
+    restart: always
+    expose:
         - "3306"
   nginx:
     container_name: nginx
