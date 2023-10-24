@@ -58,4 +58,4 @@ services:
       device: '/Users/root/data/mariadb'
   networks:
     inception:
-    driver: bridge
+      driver: bridge
