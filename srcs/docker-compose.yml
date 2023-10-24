@@ -50,13 +50,13 @@ volumes:
     driver_opts:
       type: volumes
       o: bind
-      device: /home/root/data/mariadb
+      device: /root/data/mariadb
   wordpress:
     driver: local
     driver-opts:
       type: volumes
       o: bind
-      device: /home/root/data/wordpress
+      device: /root/data/wordpress
 
 networks:
   inception:
