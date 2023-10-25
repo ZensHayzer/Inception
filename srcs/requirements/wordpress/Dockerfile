@@ -1,11 +1,11 @@
 FROM debian:buster
 
 RUN apt-get update -y && apt upgrade -y \
-    && apt-get -y install wget php7.3 php-fpm php-mysql mariadb-client
+    && apt-get -y install wget php7.3 php-fpm php-mysql mariadb-client bash
 
-RUN wget https://fr.wordpress.org/wordpress-6.0-fr_FR.tar.gz -P /var/www
+RUN	wget https://fr.wordpress.org/wordpress-6.2-fr_FR.tar.gz -P /var/www
 
-RUN cd /var/www && tar -xzf wordpress-6.0-fr_FR.tar.gz && rm wordpress-6.0-fr_FR.tar.gz
+RUN	cd /var/www && tar -xzf wordpress-6.2-fr_FR.tar.gz && rm wordpress-6.2-fr_FR.tar.gz
 
 RUN chown -R root:root /var/www/wordpress
 
@@ -31,4 +31,4 @@ EXPOSE 9000
 
 WORKDIR /var/www/wordpress
 
-CMD ["sh", "/var/confwp.sh"]
+CMD ["bash", "/var/confwp.sh"]
