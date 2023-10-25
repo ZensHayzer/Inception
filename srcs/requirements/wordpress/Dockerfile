@@ -13,9 +13,9 @@ RUN chmod 755 /var/www/wordpress
 
 COPY conf/php.conf /etc/php7.3/fpm/pool.d/www.conf
 
-RUN     mkdir -p /run/php
+RUN mkdir -p /run/php
 
-RUN     chmod 755 /run/php
+RUN chmod 755 /run/php
 
 RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 
