@@ -10,7 +10,7 @@ if ! wp core is-installed --allow-root  ; then
 fi
 if wp core is-installed --allow-root  ; then
     echo "Wordpress is installed and running"
-    php-fpm7.3 -F
+    php-fpm7.3 -F -R
 else
     echo "Wordpress's installation failed"
 fi
