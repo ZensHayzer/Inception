@@ -9,9 +9,9 @@ RUN openssl req -x509 -nodes -out /etc/nginx/ssl/inception.crt -keyout /etc/ngin
 
 RUN mkdir -p /var/run/nginx
 
-COPY conf/nginx.conf /etc/nginx/nginx.conf
+COPY ./conf/nginx.conf /etc/nginx/nginx.conf
 
-RUN chmod 755 /var/www/html
+RUN mkdir -p /var/www/html && chmod 755 /var/www/html
 
 RUN chown -R www-data:www-data /var/www/html
 
