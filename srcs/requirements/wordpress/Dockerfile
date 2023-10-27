@@ -1,7 +1,7 @@
 FROM debian:buster
 
 RUN apt-get update -y && apt upgrade -y \
-    && apt-get -y install wget php7.3 php-fpm php-mysql mariadb-client bash
+    && apt-get -y install wget php7.3 php-fpm php-mysql mariadb-client
 
 COPY conf/php.conf /etc/php7.3/fpm/pool.d/www.conf
 
@@ -31,4 +31,4 @@ EXPOSE 9000
 
 WORKDIR /var/www/wordpress
 
-CMD ["bash", "/var/confwp.sh"]
+CMD ["sh", "/var/confwp.sh"]
