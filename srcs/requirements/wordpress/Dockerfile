@@ -3,7 +3,7 @@ FROM debian:bullseye
 RUN apt-get update -y && apt upgrade -y \
     && apt-get -y install wget php-fpm php-mysql mariadb-client bash
 
-COPY conf/php.conf /etc/php7.3/fpm/pool.d/www.conf
+COPY conf/php.conf /etc/php7.4/fpm/pool.d/www.conf
 
 RUN mkdir -p /run/php
 
