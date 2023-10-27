@@ -1,7 +1,7 @@
-FROM debian:bullseye
+FROM debian:buster
 
-RUN apt update -y && apt upgrade -y \
-    && apt install -y build-essential libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev openssl wget nginx
+RUN apt-get update -y && apt upgrade -y \
+    && apt-get install -y build-essential libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev openssl wget nginx
 
 RUN mkdir -p /etc/nginx/ssl
 
