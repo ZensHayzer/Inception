@@ -24,8 +24,8 @@ services:
     env_file:
       - .env
     volumes:
-      - mariadb:/var/lib/mysql
-    restart: unless-stopped
+      - mariadb:/var/lib/mysql/
+    restart: always
     networks:
       - inception
     expose:
@@ -41,7 +41,7 @@ services:
       - mariadb
     build:
       context: ./requirements/wordpress
-    restart: on-failure
+    restart: always
     expose:
       - "9000"
     networks:

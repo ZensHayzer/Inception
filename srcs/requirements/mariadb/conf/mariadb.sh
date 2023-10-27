@@ -1,3 +1,4 @@
+set -x
 touch ext
 chmod 777 ext
 echo "CREATE DATABASE IF NOT EXISTS wordpress;" >> ext
@@ -9,4 +10,4 @@ echo "GRANT ALL ON wordpress.* TO '$SQL_USER'@'%' IDENTIFIED BY '$SQL_PASSWORD';
 echo "FLUSH PRIVILEGES;" >> ext
 mysqld --user=mysql --verbose --bootstrap < ext
 rm ext
-exec mysqld
+exec mysqld_safe
