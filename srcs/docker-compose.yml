@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3'
 
 services:
 
@@ -15,7 +15,7 @@ services:
     env_file:
       - .env
     networks:
-      - inception
+      - 42net
 
   mariadb:
     container_name: mariadb
@@ -27,7 +27,7 @@ services:
       - mariadb:/var/lib/mysql
     restart: unless-stopped
     networks:
-      - inception
+      - 42net
     expose:
       - "3306"
 
@@ -45,7 +45,7 @@ services:
     expose:
       - "9000"
     networks:
-      - inception
+      - 42net
 
 volumes:
   mariadb:
@@ -62,5 +62,5 @@ volumes:
         device: /root/data/wordpress
 
 networks:
-  inception:
+  42net:
       driver: bridge
