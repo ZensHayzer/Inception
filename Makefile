@@ -3,8 +3,8 @@ all: up
 
 .PHONY: up
 up:
-	@mkdir -p /root/data/mariadb
-	@mkdir -p /root/data/wordpress
+	@mkdir -p /home/ajeanne/data/mariadb
+	@mkdir -p /home/ajeanne/data/wordpress
 	@docker compose -f srcs/docker-compose.yml up --build
 
 .PHONY: clean
