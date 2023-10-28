@@ -13,5 +13,4 @@ if wp core is-installed --allow-root  ; then
     php-fpm7.4 -F -R
 else
     echo "Wordpress's installation failed"
-    php-fpm7.4 -F -R
 fi
